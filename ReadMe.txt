@@ -61,3 +61,49 @@ cy.contains()       cy.contains('Videos').click()
 cy.wait()          cy.wait(5000)
 
 ================================================================================================
+Lecture 2
+=======================================================================
+
+What is Page Object Model
+a design principle
+keep the objects & methods separate from test script
+efficient reusability
+easier, efficient and faster changes & maintenance
+
+Step 1 : Create a login test
+Step 2 : Create a file and add a class for the page
+export class LoginPage{
+
+}
+
+Step 3 : Add objects and functions in the class
+Step 4 : Import the class in the test spec
+import {LoginPage} from "../pages/login_page"
+
+Step 5 : Create object of the class
+const loginPage = new LoginPage()
+
+Step 6 : call the class functions
+ loginPage.enterUsername('test')
+
+App Actions
+What are App Actions
+How is it different from Page Objects
+Shortcuts in app
+provide users with quick ways to navigate to specific activities in app
+change the state of your app without user interactions (GUI)
+
+How to Group tests in Cypress
+
+Step 1 : In the test file add 2 it blocks for login test and run
+Step 2 : Have a login test with valid and invalid credentials
+Step 3 : Group all tests (it blocks) in a describe block
+
+describe()
+.only
+.skip
+beforeEach block
+within describe - Runs before each test in that describe group
+outside describe - Runs before each test in that spec file
+
+======================================================================
