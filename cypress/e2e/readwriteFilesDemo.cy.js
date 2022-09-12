@@ -30,5 +30,6 @@ it('Write file demo', function() {
 
     cy.writeFile('sample.txt', '\nAvoid overwriting example', {flag:'a+'})  
     //add a flag to avoid overwriting existing content in sample.txt
-    
+
 })
+
