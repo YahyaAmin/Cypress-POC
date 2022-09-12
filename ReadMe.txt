@@ -261,3 +261,58 @@ Step 2 : If autocomplete does not work add at the top
 
 Step 3 : Add command to download file
 cy.downloadFile('https://filepath/demo.txt,  'mydownloads' ,'demo.txt')
+
+===========================================================================
+Lecture: Reporting in Cypress
+=========================================================================
+
+1. How to install mochawesome reporter
+2. How to configure the reporter
+3. How to merge multiple JSON report files
+4. How to generate a single HTML report
+5. Troubleshooting issues like
+Unexpected token � in JSON at position 0
+Unexpected end of JSON input
+6. Run reports command automatically using
+    pretest and posttest scripts in package.json
+
+Step 1 - Install mochawesome library
+
+npm install mochawesome --save-dev
+
+Step 2 - Install mochawesome-merge library
+
+npm install mochawesome-merge --save-dev
+
+Step 3 - Add reports configuration in cypress.json
+
+{
+ "reporter": "mochawesome",
+ "reporterOptions": {
+   "charts": true,
+   "overwrite": false,
+   "html": false,
+   "json": true,
+   "reportDir": "cypress/report/mochawesome-report"
+  }
+ }
+
+Step 4 - Run command to execute tests
+
+npx cypress run --reporter mochawesome
+
+Step 5 - Run command to merge multiple json reports into one
+
+npx mochawesome-merge cypress/report/mochawesome-report/*.json ＞ cypress/report/output.json
+
+npx mochawesome-merge cypress/report/mochawesome-report/*.json | out-file -encoding ascii cypress/report/output.json
+
+Step 6 - Run command to generate html report
+
+npx marge cypress/report/output.json --reportDir ./ --inline
+
+Add report generation commands
+in package.json scripts
+pretest
+test
+posttest

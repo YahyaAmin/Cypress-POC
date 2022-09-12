@@ -3,11 +3,11 @@ import { LoginPage } from "./Pages/login_page";
 const loginPage = new LoginPage();
 
 describe("All Login Tests", () => {
-  //keywords for grouped tests       it.only, it.skip  BeforeEach(can be placed insider or outside describe block)
-  //for running "before each" for all spec files, put it in e2e.js file 
+  //keywords for grouped tests   it.only, it.skip  BeforeEach(can be placed insider or outside describe block)
+  //for running "before each" for all spec files, put it in e2e.js file
 
   beforeEach(function () {
-    cy.log("Running Login Tests")
+    cy.log("Running Login Tests");
     cy.visit("https://opensource-demo.orangehrmlive.com");
   });
 
@@ -25,4 +25,3 @@ describe("All Login Tests", () => {
     cy.get(".oxd-userdropdown-name").click();
   });
 });
-
