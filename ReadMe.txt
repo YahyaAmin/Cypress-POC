@@ -211,3 +211,53 @@ Step 2 - Test commands
 
 Relative file paths can be used
 cy.writeFile('./cypress/fixtures/files/sample.txt','Hell World’')
+
+===========================================================================
+Lecture 4
+=======================================================================
+File upload in cypress
+SETUP
+Step 1 : Install plugin cypress-file-upload
+npm install --save-dev cypress-file-upload
+
+Step 2 : If you are using TypeScript, ensure your tsconfig.json contains
+"compilerOptions": {
+  "types": ["cypress", "cypress-file-upload"]  }
+
+Step 3 : Add to cypress/support/commands.js
+import 'cypress-file-upload';
+
+Step 4 :  Check this commands.js is imported in cypress/support/index.js 
+(it might be commented)
+// Import commands.js using ES2015 syntax:
+import './commands';
+
+TEST
+Step 1 : Create a new test
+Step 2 : Add command to visit the web page
+cy.visit(' ... ')
+Step 3 : Add command to upload file
+cy.get('[name="myfile"]').attachFile(' filePath ');
+
+File download in cypress
+SETUP
+Step 1 : Install plugin cypress-downloadfile
+npm install cypress-downloadfile
+
+Step 2 : Add to cypress/support/commands.js
+require('cypress-downloadfile/lib/downloadFileCommand')
+
+Step 3 : Add to cypress/plugins/index.js
+
+const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
+module.exports = (on, config) =＞ {
+  on('task', {downloadFile}) }
+
+TEST
+Step 1 : Create a new test
+
+Step 2 : If autocomplete does not work add at the top
+/// ＜reference types="cypress-downloadfile"/＞
+
+Step 3 : Add command to download file
+cy.downloadFile('https://filepath/demo.txt,  'mydownloads' ,'demo.txt')
