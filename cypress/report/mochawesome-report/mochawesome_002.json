@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-09-14T08:15:33.166Z",
+    "end": "2022-09-14T08:16:36.926Z",
+    "duration": 63760,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "62a96503-a7a6-472f-9d40-78883830939a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pomdemo.cy.js",
+      "file": "cypress\\e2e\\pomdemo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "581f41f1-d4bb-454c-9af3-24995fa5de23",
+          "title": "All Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login Test 1",
+              "fullTitle": "All Login Tests Login Test 1",
+              "timedOut": null,
+              "duration": 60191,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername(\"Admin\");\nloginPage.enterPassword(\"admin123\");\nloginPage.clickLogin();\ncy.get(\".oxd-userdropdown-name\").click();",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `All Login Tests`",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `All Login Tests`\n    at timedOutWaitingForPageLoad (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:140929:74)\n    at https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:142150:16\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:11318:23)\n    at https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:6440:41\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at Context.eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress\\e2e\\pomdemo.cy.js:194:8)",
+                "diff": null
+              },
+              "uuid": "d1058268-e190-492e-8b2c-046551bf17d2",
+              "parentUUID": "581f41f1-d4bb-454c-9af3-24995fa5de23",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Test 2",
+              "fullTitle": "All Login Tests Login Test 2",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername(\"WrongAdmin\");\nloginPage.enterPassword(\"admin123\");\nloginPage.clickLogin();\ncy.get(\".oxd-userdropdown-name\").click();",
+              "err": {},
+              "uuid": "0d9591a7-413a-4fac-a038-7b265a5f5963",
+              "parentUUID": "581f41f1-d4bb-454c-9af3-24995fa5de23",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d1058268-e190-492e-8b2c-046551bf17d2"
+          ],
+          "pending": [],
+          "skipped": [
+            "0d9591a7-413a-4fac-a038-7b265a5f5963"
+          ],
+          "duration": 60191,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

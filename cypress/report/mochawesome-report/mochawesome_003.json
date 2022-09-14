@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-14T08:16:46.407Z",
+    "end": "2022-09-14T08:16:46.562Z",
+    "duration": 155,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "83382b34-6ed8-443e-889a-ddefa7de7fbf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\readwriteFilesDemo.cy.js",
+      "file": "cypress\\e2e\\readwriteFilesDemo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Read files using fixtures",
+          "fullTitle": "Read files using fixtures",
+          "timedOut": null,
+          "duration": 47,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.fixture(\"example.json\").then(data => {\n  cy.log(data.name);\n  cy.log(data.email);\n});\ncy.log(this.test_data.name); //to use data as a variable",
+          "err": {},
+          "uuid": "6049355c-9e24-4384-8f83-dea539515619",
+          "parentUUID": "83382b34-6ed8-443e-889a-ddefa7de7fbf",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "read file using ReadFile()",
+          "fullTitle": "read file using ReadFile()",
+          "timedOut": null,
+          "duration": 32,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.readFile(\"cypress/fixtures/example.json\").then(data => {\n  cy.log(data.name); //for json files can use its => .its('name').should('eq','data)\n});",
+          "err": {},
+          "uuid": "e8d5d4b1-19e1-434c-8d2b-90efe2b3d1a3",
+          "parentUUID": "83382b34-6ed8-443e-889a-ddefa7de7fbf",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Write file demo",
+          "fullTitle": "Write file demo",
+          "timedOut": null,
+          "duration": 35,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.writeFile(\"sample.txt\", \"I am Yahya\"); //if file doesn't exist, then it will be created on root directory\ncy.writeFile(\"sample.txt\", \"\\nAvoid overwriting example\", {\n  flag: \"a+\"\n}); //add a flag to avoid overwriting existing content in sample.txt",
+          "err": {},
+          "uuid": "731a864b-3909-475e-9742-f2fa6872c6fe",
+          "parentUUID": "83382b34-6ed8-443e-889a-ddefa7de7fbf",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "6049355c-9e24-4384-8f83-dea539515619",
+        "e8d5d4b1-19e1-434c-8d2b-90efe2b3d1a3",
+        "731a864b-3909-475e-9742-f2fa6872c6fe"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 114,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-14T08:15:26.091Z",
+    "end": "2022-09-14T08:15:29.432Z",
+    "duration": 3341,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "381ceb97-2dbc-4472-a581-2e2acd0f07cd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\fileuploaddownload.cy.js",
+      "file": "cypress\\e2e\\fileuploaddownload.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "File upload demo",
+          "fullTitle": "File upload demo",
+          "timedOut": null,
+          "duration": 374,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit(\"https://trytestingthis.netlify.app/\");\ncy.get(\"#myfile\").attachFile(\"UploadFile.txt\"); //for files inside fixtures, no need to mention path",
+          "err": {},
+          "uuid": "ab72eda5-18cd-4eaa-b5df-2bee0585d757",
+          "parentUUID": "381ceb97-2dbc-4472-a581-2e2acd0f07cd",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "File Download demo",
+          "fullTitle": "File Download demo",
+          "timedOut": null,
+          "duration": 637,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.downloadFile(\"https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg\", \"mydownloads\", \"example.jpg\"); //creates a folder named mydownloads in project folder and downloads example.jpg",
+          "err": {},
+          "uuid": "1cc2e634-779c-443b-83bf-ae59d7824f73",
+          "parentUUID": "381ceb97-2dbc-4472-a581-2e2acd0f07cd",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "ab72eda5-18cd-4eaa-b5df-2bee0585d757",
+        "1cc2e634-779c-443b-83bf-ae59d7824f73"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 1011,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

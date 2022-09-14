@@ -7,7 +7,16 @@ module.exports = defineConfig({
       // implement node event listeners here
       on('task', {downloadFile})
     },
+      "reporter": "mochawesome",
+      "reporterOptions": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+       }
+      },
   },
-});
+);
 
 
